@@ -35,9 +35,6 @@ function filterBooks(json bookStore, int yearParam) returns json {
                 if (year > yearParam) {
                     filteredBooks[index] = book;
                     index++;
-                    io:println(book);
-                } else {
-                    bookStore.store.remove(book.toString());
                 }
             }
             any a => {
